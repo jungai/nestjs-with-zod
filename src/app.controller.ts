@@ -17,7 +17,7 @@ export class AppController {
     }),
   )
   @ApiQuery({
-    schema: zodToJson(GetSongQueryDto) as any,
+    schema: zodToJson(GetSongQueryDto),
   })
   getSongs(@Query() query: TGetSongQuery) {
     return this.appService.getSongs(query);
