@@ -1,0 +1,27 @@
+@contentType = application/json
+@baseUrl = http://localhost:3000
+
+
+###
+
+# @name GetSongs
+GET {{baseUrl}}/songs
+Content-Type:  {{contentType}}
+
+###
+
+# @name GetSongByName
+GET {{baseUrl}}/songs?name=bb
+Content-Type:  {{contentType}}
+
+###
+
+# @name CreateSong
+POST {{baseUrl}}/songs
+Content-Type:  {{contentType}}
+
+{
+    "name": "Forever Only",
+    "artist": "jaehyun"
+    # "artist": 1
+}
