@@ -122,7 +122,7 @@ describe('zod pipe', () => {
       expect(typeof result.id).toBe('string');
     });
 
-    it('should return obj with out id', () => {
+    it('should return obj without id', () => {
       const rawObj = {
         name: 'iu',
       };
@@ -132,7 +132,7 @@ describe('zod pipe', () => {
       expect(typeof result.name).toBe('string');
     });
 
-    it('should return obj with out name', () => {
+    it('should return obj without name', () => {
       const rawObj = {
         id: '1',
       };
@@ -172,7 +172,7 @@ describe('zod pipe', () => {
       expect(result).toMatchObject({});
     });
 
-    it('should return a correct obj and type default', () => {
+    it('should return a correct obj and type', () => {
       const rawObj = {
         id: '1',
       };
@@ -246,7 +246,7 @@ describe('zod pipe', () => {
     });
   });
 
-  // cause everything in prams and parsing type
+  // cause everything in params and parsing type
   describe('case: params with parsing type', () => {
     beforeAll(() => {
       const paramsSchema = z
@@ -270,7 +270,7 @@ describe('zod pipe', () => {
       expect(typeof result.id).toBe('number');
     });
 
-    it('should be error id is a string number only', () => {
+    it('should be error id is string number only', () => {
       const rawObj = {
         id: 1,
       };
@@ -312,7 +312,7 @@ describe('zod pipe', () => {
       });
     });
 
-    it('should return a correct obj and type default', () => {
+    it('should return a correct obj and type', () => {
       const rawParams = {
         id: '1',
       };
@@ -334,7 +334,7 @@ describe('zod pipe', () => {
       expect(resultFromBody).toMatchObject(rawBody);
     });
 
-    it('should return a correct with optional city', () => {
+    it('should return a correct obj with optional city', () => {
       const rawParams = {
         id: '1',
       };
@@ -380,7 +380,7 @@ describe('zod pipe', () => {
       );
     });
 
-    it('should be error email is not valid format', () => {
+    it('should be error email is invalid format', () => {
       const rawParams = {
         id: '1',
       };
