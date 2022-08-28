@@ -11,6 +11,9 @@ interface IZodPipeSchema {
   params?: z.ZodObject<z.ZodRawShape>;
   query?: z.ZodObject<z.ZodRawShape>;
   body?: z.ZodObject<z.ZodRawShape>;
+  params?: z.ZodObject<z.ZodRawShape, 'strict'>;
+  query?: z.ZodObject<z.ZodRawShape, 'strict'>;
+  body?: z.ZodObject<z.ZodRawShape, 'strict'>;
 }
 
 @Injectable()
