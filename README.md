@@ -1,5 +1,5 @@
 - [x] validate pipe
 - [x] integrate `@nest/swagger`
 - [x] infer types
-- [ ] parsing
-- [ ] unit test
+- [x] parsing
+- [x] unit test
